@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UFO Sightings</title>
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+​
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row ">
+      <div class="col m-3" style="color: rgb(230, 225, 220);">
+        <h1>UFO Sightings Database</h1>
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col-sm-4 col-md-2">
+        <aside class="filters">
+          <div class="panel panel-default">
+            <div>
+              <h4>Filter Below</h4>
+              <button id="clear-btn" type="button" class="btn btn-default">Clear Filter</button>
+            </div>
+            <!-- Filter by Date -->
+            <div class="panel-body">
+              <form id="date_form">
+              <div class="form-group">
+                <ul class="list-group" id="filters">
+                  <li class="filter list-group-item">
+                    <label for="date">by Date</label>
+                    <input class="form-control" id="datetime" type="text" placeholder="1/9/2010">
+                  </li>
+                </ul>
+              </div>
+              </form>
+            </div>
+            <!-- Filter by City -->
+            <div class="panel-body">
+              <form id="city_form">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="city">by City</label>
+                      <input class="form-control" id="city" type="text" placeholder="la mesa">
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <!-- Filter by State -->
+            <div class="panel-body">
+              <form id="state_form">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="state">by State</label>
+                      <input class="form-control" id="state" type="text" placeholder="ca">
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <!-- Filter by Country -->
+            <div class="panel-body">
+              <form id="country_form">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="country">by Country</label>
+                      <input class="form-control" id="country" type="text" placeholder="us">
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+            <!-- Filter by UFO Shape -->
+            <div class="panel-body">
+              <form id="shape_form">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="shape">by UFO Shape</label>
+                      <input class="form-control" id="shape" type="text" placeholder="sphere">
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </aside>
+      </div>
+
+      <!-- TABLE -->
+      <div class="col-sm-7 col-md-9 m-3">
+        <div class="table-responsive table-fixedheader" style="height:600px;overflow:scroll;">
+          <table class="table table-fixed table-hover table-sm">
+            <thead>
+              <tr style="text-align: left;">
+                <th class="table-head">Date</th>
+                <th class="table-head">City</th>
+                <th class="table-head">State</th>
+                <th class="table-head">Country</th>
+                <th class="table-head">Shape</th>
+                <th class="table-head">Duration</th>
+                <th class="table-head">Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-1"></div>
+
+    </div>
+    <div class="row">
+      <br><br><br>
+
+    </div>
+  </div><br>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+​
+</html>
